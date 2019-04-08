@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import RxSwift
 
 class MasterViewController: UIViewController, CharacterDelegate {
 

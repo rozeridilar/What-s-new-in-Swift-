@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 protocol CharacterDelegate {
     func didSelectCharacter (_ name:String)
@@ -16,6 +17,8 @@ class DetailViewController: UIViewController {
    
     
     var delegate:CharacterDelegate?
+    
+    private let selectedCharacterVariable = Variable("User")
     
     override func viewDidLoad() {
         super.viewDidLoad()

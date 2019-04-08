@@ -1,0 +1,6 @@
+framework module Pods_RxViewControllerCommunication {
+  umbrella header "Pods-RxViewControllerCommunication-umbrella.h"
+
+  export *
+  module * { export * }
+}
