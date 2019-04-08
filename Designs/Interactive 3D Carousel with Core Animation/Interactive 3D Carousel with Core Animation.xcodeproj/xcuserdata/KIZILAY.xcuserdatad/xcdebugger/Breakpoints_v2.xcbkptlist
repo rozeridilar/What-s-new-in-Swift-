@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Interactive 3D Carousel with Core Animation/AppDelegate.swift"
-            timestampString = "576431803.819802"
+            timestampString = "576432151.6622469"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Interactive 3D Carousel with Core Animation/ViewController.swift"
-            timestampString = "576431803.819886"
+            timestampString = "576432151.662336"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "textLayer"
             landmarkType = "24">
          </BreakpointContent>

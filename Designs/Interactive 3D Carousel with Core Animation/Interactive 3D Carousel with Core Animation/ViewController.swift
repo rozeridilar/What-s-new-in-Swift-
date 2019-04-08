@@ -37,12 +37,12 @@ class ViewController: UIViewController {
         
         //textLayer.frame.size.height = imageLayer.frame.height / 5
         
-       textLayer.frame = CGRect(x: 0, y: imageLayer.frame.origin.y, width: imageLayer.frame.width, height: imageLayer.frame.height)
+       textLayer.frame = CGRect(x: 0, y: imageLayer.frame.origin.y, width: imageLayer.frame.width, height: imageLayer.frame.height/3)
     
         textLayer.isDoubleSided = true
         
         textLayer.foregroundColor = UIColor.white.cgColor
-        textLayer.backgroundColor = UIColor.gray.withAlphaComponent(0.5).cgColor
+        textLayer.backgroundColor = UIColor.darkGray.withAlphaComponent(0.5).cgColor
         textLayer.isWrapped = true
         textLayer.alignmentMode = CATextLayerAlignmentMode.center
         textLayer.contentsScale = UIScreen.main.scale
@@ -87,7 +87,7 @@ class ViewController: UIViewController {
         let imageLayer = CALayer()
         
         //width decides how image will fit
-        imageLayer.frame = CGRect(x: self.view.frame.size.width / 2 - imageCardSize.width / 2, y: self.view.frame.size.height / 2 - imageCardSize.height / 2, width: imageCardSize.width - 30, height: imageCardSize.height)
+        imageLayer.frame = CGRect(x: self.view.frame.size.width / 2 - imageCardSize.width / 2, y: self.view.frame.size.height / 2 - imageCardSize.height / 2, width: imageCardSize.width - 35, height: imageCardSize.height)
         imageLayer.anchorPoint = CGPoint(x: 0.5 , y: 0.5)
         
         guard let imageCard = UIImage(named: name)?.cgImage else{return}
