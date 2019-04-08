@@ -8,8 +8,8 @@
 
 import UIKit
 
-enum capitals{
-    case amsterdam,london,budapest,ankara,madrid,paris,rome
+enum Capitals: String, CaseIterable{
+    case amsterdam = "amsterdam",london = "london",budapest = "budapest",ankara = "ankara",madrid = "madrid",paris = "paris",rome = "rome"
 }
 
 func degreeToRadians(_ deg: CGFloat) -> CGFloat{
@@ -18,15 +18,29 @@ func degreeToRadians(_ deg: CGFloat) -> CGFloat{
 
 class ViewController: UIViewController {
 
+    //container for all of our image cards
+    let transformLayer = CATransformLayer()
+    
+    //rotate to our image cards
+    var currentAngle:CGFloat = 0
+    
+    //store the offset of our pan gesture recognizer
+    var currentOffset: CGFloat = 0
+    
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .lightContent
     }
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        addImageCard(name: "amsterdam")
+        Capitals.allCases.forEach{
+            addImageCard(name: $0.rawValue)
+        }
+        
+        transformLayer.frame = self.view.bounds
+        view.layer.addSublayer(transformLayer)
         
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(ViewController.performPanAction(recognizer:)))
         
@@ -42,13 +56,17 @@ class ViewController: UIViewController {
         
         guard let imageCard = UIImage(named: name)?.cgImage else{return}
         
+        imageLayer.borderColor = UIColor(white: 1, alpha: 0.5).cgColor
+        imageLayer.borderWidth = 5
+        imageLayer.cornerRadius = 10
+        
         imageLayer.contents = imageCard
         imageLayer.contentsGravity = .resizeAspectFill
         imageLayer.masksToBounds = true
         
         imageLayer.isDoubleSided = true
         
-        view.layer.addSublayer(imageLayer)
+        transformLayer.addSublayer(imageLayer)
         
     }
     
