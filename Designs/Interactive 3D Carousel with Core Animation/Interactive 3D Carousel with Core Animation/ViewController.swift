@@ -72,8 +72,29 @@ class ViewController: UIViewController {
         imageLayer.masksToBounds = true
         
         imageLayer.isDoubleSided = true
-        
+        addText("dd", imageLayer: imageLayer)
         transformLayer.addSublayer(imageLayer)
+        
+    }
+    
+    func addText(_ text: String, imageLayer: CALayer){
+        let textLayer = CATextLayer()
+        textLayer.frame = imageLayer.bounds
+
+        let string = "Beginner"
+       
+        textLayer.string = string
+        textLayer.alignmentMode = .center
+        
+        textLayer.font = UIFont(name: "Avenir-Light", size: 15.0)
+        textLayer.isDoubleSided = true
+        
+        textLayer.foregroundColor = UIColor.white.cgColor
+        textLayer.isWrapped = true
+        textLayer.alignmentMode = CATextLayerAlignmentMode.left
+        textLayer.contentsScale = UIScreen.main.scale
+        imageLayer.addSublayer(textLayer)
+     
         
     }
     
