@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         let textLayer = CATextLayer()
         textLayer.frame = imageLayer.bounds
         
-        let string = "Beginner"
+        let string = text
         
         textLayer.string = string
         textLayer.alignmentMode = .center
@@ -92,7 +92,9 @@ class ViewController: UIViewController {
         imageLayer.masksToBounds = true
         
         imageLayer.isDoubleSided = true
-        imageLayer.addSublayer(textLayer("Some text", imageLayer))
+        
+        imageLayer.addSublayer(textLayer(name, imageLayer))
+        
         transformLayer.addSublayer(imageLayer)
         
     }
