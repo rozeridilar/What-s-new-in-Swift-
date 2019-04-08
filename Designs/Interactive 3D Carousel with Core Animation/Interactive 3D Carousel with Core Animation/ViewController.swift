@@ -33,11 +33,13 @@ class ViewController: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+       
         
         Capitals.allCases.forEach{
             addImageCard(name: $0.rawValue)
         }
+        
         
         turnCrousel()
         
@@ -53,10 +55,10 @@ class ViewController: UIViewController {
     }
     
     func addImageCard(name: String){
-        let imageCardSize = CGSize(width: self.view.bounds.width - 200, height: 300)
+        let imageCardSize = CGSize(width: 200, height: 300)
         
         let imageLayer = CALayer()
-        imageLayer.frame = CGRect(x: self.view.frame.width / 2 - imageCardSize.width / 2, y: self.view.frame.height / 2 - imageCardSize.height / 2, width: imageCardSize.width, height: imageCardSize.height)
+        imageLayer.frame = CGRect(x: self.view.frame.size.width / 2 - imageCardSize.width / 2, y: self.view.frame.size.height / 2 - imageCardSize.height / 2, width: imageCardSize.width - 20, height: imageCardSize.height)
         imageLayer.anchorPoint = CGPoint(x: 0.5 , y: 0.5)
         
         guard let imageCard = UIImage(named: name)?.cgImage else{return}
@@ -78,16 +80,16 @@ class ViewController: UIViewController {
     func turnCrousel(){
         guard let transformSublayers = transformLayer.sublayers else {return}
         
-        let segmentForImageCard = CGFloat( 360 / transformSublayers.count)
+        let segmentForImageCard = CGFloat( 360 / (transformSublayers.count))
         
         var angleOffset = currentAngle
         
         for layer in transformSublayers{
             var transform = CATransform3DIdentity
-            transform.m34 = -1/500
+            transform.m34 = -1 / 500
             
             transform = CATransform3DRotate(transform, degreeToRadians(angleOffset), 0, 1, 0)
-            transform = CATransform3DTranslate(transform, 0, 0, self.view.bounds.width - 170)
+            transform = CATransform3DTranslate(transform, 0, 0, 200)
             
             CATransaction.setAnimationDuration(0)
             
@@ -104,7 +106,7 @@ class ViewController: UIViewController {
             currentOffset = 0
         }
         
-        let xDiff = xOffset * 0.6 - currentOffset
+        let xDiff = xOffset * 0.4 - currentOffset
         
         currentOffset += xDiff
         currentAngle += xDiff
