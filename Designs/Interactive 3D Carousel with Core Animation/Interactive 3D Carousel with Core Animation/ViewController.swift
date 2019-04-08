@@ -31,17 +31,19 @@ class ViewController: UIViewController {
         let textLayer = CATextLayer()
         textLayer.frame = imageLayer.bounds
         
+        textLayer.frame.origin.y = imageLayer.frame.origin.y
+        
         let string = text
         
         textLayer.string = string
-        textLayer.alignmentMode = .center
-        
         textLayer.font = UIFont(name: "Avenir-Light", size: 15.0)
+    
         textLayer.isDoubleSided = true
         
         textLayer.foregroundColor = UIColor.white.cgColor
+        textLayer.backgroundColor = UIColor.gray.withAlphaComponent(0.5).cgColor
         textLayer.isWrapped = true
-        textLayer.alignmentMode = CATextLayerAlignmentMode.left
+        textLayer.alignmentMode = CATextLayerAlignmentMode.center
         textLayer.contentsScale = UIScreen.main.scale
         
         return textLayer
