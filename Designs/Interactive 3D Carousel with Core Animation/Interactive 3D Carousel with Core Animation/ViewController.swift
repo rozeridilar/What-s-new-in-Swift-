@@ -17,7 +17,7 @@ func degreeToRadians(_ deg: CGFloat) -> CGFloat{
 }
 
 class ViewController: UIViewController {
-
+    
     //container for all of our image cards
     let transformLayer = CATransformLayer()
     
@@ -27,14 +27,34 @@ class ViewController: UIViewController {
     //store the offset of our pan gesture recognizer
     var currentOffset: CGFloat = 0
     
+    var textLayer = {(_ text: String, imageLayer: CALayer) -> CATextLayer in
+        let textLayer = CATextLayer()
+        textLayer.frame = imageLayer.bounds
+        
+        let string = "Beginner"
+        
+        textLayer.string = string
+        textLayer.alignmentMode = .center
+        
+        textLayer.font = UIFont(name: "Avenir-Light", size: 15.0)
+        textLayer.isDoubleSided = true
+        
+        textLayer.foregroundColor = UIColor.white.cgColor
+        textLayer.isWrapped = true
+        textLayer.alignmentMode = CATextLayerAlignmentMode.left
+        textLayer.contentsScale = UIScreen.main.scale
+        
+        return textLayer
+    }
+    
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .lightContent
     }
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
+        
         
         Capitals.allCases.forEach{
             addImageCard(name: $0.rawValue)
@@ -72,31 +92,11 @@ class ViewController: UIViewController {
         imageLayer.masksToBounds = true
         
         imageLayer.isDoubleSided = true
-        addText("dd", imageLayer: imageLayer)
+        imageLayer.addSublayer(textLayer("Some text", imageLayer))
         transformLayer.addSublayer(imageLayer)
         
     }
     
-    func addText(_ text: String, imageLayer: CALayer){
-        let textLayer = CATextLayer()
-        textLayer.frame = imageLayer.bounds
-
-        let string = "Beginner"
-       
-        textLayer.string = string
-        textLayer.alignmentMode = .center
-        
-        textLayer.font = UIFont(name: "Avenir-Light", size: 15.0)
-        textLayer.isDoubleSided = true
-        
-        textLayer.foregroundColor = UIColor.white.cgColor
-        textLayer.isWrapped = true
-        textLayer.alignmentMode = CATextLayerAlignmentMode.left
-        textLayer.contentsScale = UIScreen.main.scale
-        imageLayer.addSublayer(textLayer)
-     
-        
-    }
     
     func turnCrousel(){
         guard let transformSublayers = transformLayer.sublayers else {return}
