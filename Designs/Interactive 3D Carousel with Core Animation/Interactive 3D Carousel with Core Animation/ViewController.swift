@@ -30,18 +30,14 @@ class ViewController: UIViewController {
     
     var textLayer = {(_ text: String, imageLayer: CALayer) -> CATextLayer in
         let textLayer = CATextLayer()
-        textLayer.frame = imageLayer.bounds
         
-        //Eger 2 Kelime Ise
+        //What if the string is more than 2 words
         //textLayer.frame.origin.y = imageLayer.frame.origin.y - 70
-        textLayer.frame.origin.y = imageLayer.frame.origin.y
+        
         
         //textLayer.frame.size.height = imageLayer.frame.height / 5
         
-        let string = text
-        
-        textLayer.string = string
-        textLayer.font = UIFont(name: "Avenir-Light", size: 15.0)
+       textLayer.frame = CGRect(x: 0, y: imageLayer.frame.origin.y, width: imageLayer.frame.width, height: imageLayer.frame.height)
     
         textLayer.isDoubleSided = true
         
@@ -50,6 +46,10 @@ class ViewController: UIViewController {
         textLayer.isWrapped = true
         textLayer.alignmentMode = CATextLayerAlignmentMode.center
         textLayer.contentsScale = UIScreen.main.scale
+        textLayer.contentsGravity = CALayerContentsGravity.center
+        
+        textLayer.string = text
+        textLayer.font = UIFont(name: "Avenir-Light", size: 15.0)
         
         return textLayer
     }
