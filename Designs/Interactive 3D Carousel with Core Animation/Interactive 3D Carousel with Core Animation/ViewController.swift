@@ -26,12 +26,17 @@ class ViewController: UIViewController {
     
     //store the offset of our pan gesture recognizer
     var currentOffset: CGFloat = 0
+    let imageCardSize = CGSize(width: 200, height: 300)
     
     var textLayer = {(_ text: String, imageLayer: CALayer) -> CATextLayer in
         let textLayer = CATextLayer()
         textLayer.frame = imageLayer.bounds
         
+        //Eger 2 Kelime Ise
+        //textLayer.frame.origin.y = imageLayer.frame.origin.y - 70
         textLayer.frame.origin.y = imageLayer.frame.origin.y
+        
+        //textLayer.frame.size.height = imageLayer.frame.height / 5
         
         let string = text
         
@@ -77,10 +82,12 @@ class ViewController: UIViewController {
     }
     
     func addImageCard(name: String){
-        let imageCardSize = CGSize(width: 200, height: 300)
+       
         
         let imageLayer = CALayer()
-        imageLayer.frame = CGRect(x: self.view.frame.size.width / 2 - imageCardSize.width / 2, y: self.view.frame.size.height / 2 - imageCardSize.height / 2, width: imageCardSize.width - 20, height: imageCardSize.height)
+        
+        //width decides how image will fit
+        imageLayer.frame = CGRect(x: self.view.frame.size.width / 2 - imageCardSize.width / 2, y: self.view.frame.size.height / 2 - imageCardSize.height / 2, width: imageCardSize.width - 30, height: imageCardSize.height)
         imageLayer.anchorPoint = CGPoint(x: 0.5 , y: 0.5)
         
         guard let imageCard = UIImage(named: name)?.cgImage else{return}
