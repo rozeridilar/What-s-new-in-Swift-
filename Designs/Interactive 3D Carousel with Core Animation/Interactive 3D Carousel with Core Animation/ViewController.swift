@@ -39,16 +39,21 @@ class ViewController: UIViewController {
             addImageCard(name: $0.rawValue)
         }
         
-        transformLayer.frame = self.view.bounds
-        view.layer.addSublayer(transformLayer)
+        turnCrousel()
         
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(ViewController.performPanAction(recognizer:)))
         
         self.view.addGestureRecognizer(panGestureRecognizer)
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        transformLayer.frame = self.view.bounds
+        view.layer.addSublayer(transformLayer)
+    }
+    
     func addImageCard(name: String){
-        let imageCardSize = CGSize(width: 200, height: 300)
+        let imageCardSize = CGSize(width: self.view.bounds.width - 200, height: 300)
         
         let imageLayer = CALayer()
         imageLayer.frame = CGRect(x: self.view.frame.width / 2 - imageCardSize.width / 2, y: self.view.frame.height / 2 - imageCardSize.height / 2, width: imageCardSize.width, height: imageCardSize.height)
@@ -70,8 +75,41 @@ class ViewController: UIViewController {
         
     }
     
-    @objc func performPanAction(recognizer: UIPanGestureRecognizer){
+    func turnCrousel(){
+        guard let transformSublayers = transformLayer.sublayers else {return}
         
+        let segmentForImageCard = CGFloat( 360 / transformSublayers.count)
+        
+        var angleOffset = currentAngle
+        
+        for layer in transformSublayers{
+            var transform = CATransform3DIdentity
+            transform.m34 = -1/500
+            
+            transform = CATransform3DRotate(transform, degreeToRadians(angleOffset), 0, 1, 0)
+            transform = CATransform3DTranslate(transform, 0, 0, self.view.bounds.width - 170)
+            
+            CATransaction.setAnimationDuration(0)
+            
+            layer.transform = transform
+            
+            angleOffset += segmentForImageCard
+        }
+    }
+    
+    @objc func performPanAction(recognizer: UIPanGestureRecognizer){
+        let xOffset = recognizer.translation(in: self.view).x
+        
+        if recognizer.state == .began{
+            currentOffset = 0
+        }
+        
+        let xDiff = xOffset * 0.6 - currentOffset
+        
+        currentOffset += xDiff
+        currentAngle += xDiff
+        
+        turnCrousel()
     }
 }
 
