@@ -133,6 +133,8 @@ class ViewController: UIViewController {
         }
     }
     
+    var isTurningToLeft: Bool = false
+    
     @objc func performPanAction(recognizer: UIPanGestureRecognizer){
         let xOffset = recognizer.translation(in: self.view).x
         
@@ -145,6 +147,9 @@ class ViewController: UIViewController {
         currentOffset += xDiff
         currentAngle += xDiff
         
+        //What If XOffset == 0 ?
+        isTurningToLeft = xOffset > 0 ? true : false
+        
         turnCrousel()
     }
     
@@ -156,18 +161,33 @@ class ViewController: UIViewController {
         let variance = 25
         let res = (Int(self.currentAngle)).magnitude
         var maxVal = res.advanced(by: variance)
-        let minVal = res.distance(to: UInt(variance))
-      
+        var minVal = res.distance(to: UInt(variance))
+        
         Capitals.allCases.forEach{
+           
             if maxVal.magnitude > 360 {
                 maxVal = maxVal.magnitude % 360
             }
+            if minVal.magnitude > 360 {
+                minVal = Int(minVal.magnitude % 360)
+            }
+            
             let max = maxVal / layerAngle.magnitude
             let min = (minVal / layerAngle).magnitude
-            if max == $0.rawValue{
-                print("\($0)")
-                return
-            }
+            
+   //         if !isTurningToLeft{
+            
+                if max == $0.rawValue{
+                    print("\($0)")
+                    return
+                }
+//            }else{
+//                if min == $0.rawValue{
+//                    print("\($0)")
+//                    return
+//                }
+//            }
+            
         }
     }
     
