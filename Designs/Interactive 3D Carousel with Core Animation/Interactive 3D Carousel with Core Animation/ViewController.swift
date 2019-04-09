@@ -8,8 +8,12 @@
 
 import UIKit
 
-enum Capitals: String, CaseIterable{
-    case amsterdam = "amsterdam",london = "london",budapest = "budapest",ankara = "ankara",madrid = "madrid",paris = "paris",rome = "rome"
+enum Capitals: Int, CaseIterable{
+    case amsterdam = 0
+    ,london = 1
+    ,budapest = 2
+    //,ankara = "ankara",madrid = "madrid",paris = "paris"
+    //,rome = "rome"
 }
 
 func degreeToRadians(_ deg: CGFloat) -> CGFloat{
@@ -37,8 +41,8 @@ class ViewController: UIViewController {
         
         //textLayer.frame.size.height = imageLayer.frame.height / 5
         
-       textLayer.frame = CGRect(x: 0, y: imageLayer.frame.origin.y, width: imageLayer.frame.width, height: imageLayer.frame.height/3)
-    
+        textLayer.frame = CGRect(x: 0, y: imageLayer.frame.origin.y, width: imageLayer.frame.width, height: imageLayer.frame.height/3)
+        
         textLayer.isDoubleSided = true
         
         textLayer.foregroundColor = UIColor.white.cgColor
@@ -47,7 +51,7 @@ class ViewController: UIViewController {
         textLayer.alignmentMode = CATextLayerAlignmentMode.center
         textLayer.contentsScale = UIScreen.main.scale
         textLayer.contentsGravity = CALayerContentsGravity.center
-        
+        textLayer.name = "Text \(text)"
         textLayer.string = text
         textLayer.font = UIFont(name: "Avenir-Light", size: 15.0)
         
@@ -61,18 +65,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         Capitals.allCases.forEach{
-            addImageCard(name: $0.rawValue)
+            addImageCard(name: "\($0)")
         }
-        
         
         turnCrousel()
         
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(ViewController.performPanAction(recognizer:)))
         
         self.view.addGestureRecognizer(panGestureRecognizer)
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.handleTap(_:)))
+        self.view.addGestureRecognizer(tapGestureRecognizer)
     }
     
     override func viewDidLayoutSubviews() {
@@ -82,8 +86,6 @@ class ViewController: UIViewController {
     }
     
     func addImageCard(name: String){
-       
-        
         let imageLayer = CALayer()
         
         //width decides how image will fit
@@ -100,12 +102,13 @@ class ViewController: UIViewController {
         imageLayer.contentsGravity = .resizeAspectFill
         imageLayer.masksToBounds = true
         
+        imageLayer.name = "Image \(name)"
+        
         imageLayer.isDoubleSided = true
         
         imageLayer.addSublayer(textLayer(name, imageLayer))
         
         transformLayer.addSublayer(imageLayer)
-        
     }
     
     
@@ -126,7 +129,6 @@ class ViewController: UIViewController {
             CATransaction.setAnimationDuration(0)
             
             layer.transform = transform
-            
             angleOffset += segmentForImageCard
         }
     }
@@ -145,5 +147,29 @@ class ViewController: UIViewController {
         
         turnCrousel()
     }
+    
+    @objc func handleTap(_ sender: UITapGestureRecognizer){
+        // -> 360 / (Capitals.count)
+        print("Current Offset \(self.currentOffset)")
+        print("Current Angle \(self.currentAngle)")
+        let layerAngle = 360 / Capitals.allCases.count
+        let variance = 25
+        let res = (Int(self.currentAngle)).magnitude
+        var maxVal = res.advanced(by: variance)
+        let minVal = res.distance(to: UInt(variance))
+      
+        Capitals.allCases.forEach{
+            if maxVal.magnitude > 360 {
+                maxVal = maxVal.magnitude % 360
+            }
+            let max = maxVal / layerAngle.magnitude
+            let min = (minVal / layerAngle).magnitude
+            if max == $0.rawValue{
+                print("\($0)")
+                return
+            }
+        }
+    }
+    
 }
 
