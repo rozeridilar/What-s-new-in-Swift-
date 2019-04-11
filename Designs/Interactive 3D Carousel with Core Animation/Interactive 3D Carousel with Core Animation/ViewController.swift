@@ -175,7 +175,8 @@ class ViewController: UIViewController {
             if max == $0.rawValue{
                 if !isTurningToLeft{
                     //print("Right \($0)")
-                    tappedElement = "\($0)"
+                    tappedElement = currentAngle < 0 ? "\($0)" : $0.rawValue == 2 ? "\(Capitals.allCases[1])" : $0.rawValue == 1 ?
+                        "\(Capitals.allCases[2])" : "\($0)"
                     return
                 }else{
                     if totalCount % 2 == 0 && ($0.rawValue == 0 || $0.rawValue == totalCount/2) {
