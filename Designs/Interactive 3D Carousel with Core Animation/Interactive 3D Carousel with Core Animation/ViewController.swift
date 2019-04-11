@@ -197,8 +197,12 @@ class ViewController: UIViewController {
         self.showAlert(isTurningToLeft ? "Left Direction" : "Right Direction", tappedElement)
     }
     
-    func showAlert(_ head: String, _ text: String){
-        let alert = UIAlertController(title: head, message: text, preferredStyle: .alert)
+    func showAlert(_ head: String, _ message: String){
+        guard message.count > 1 else{
+            return
+        }
+        
+        let alert = UIAlertController(title: head, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert, animated: true)
     }
