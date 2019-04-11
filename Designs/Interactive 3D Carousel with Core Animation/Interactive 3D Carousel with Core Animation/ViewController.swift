@@ -165,6 +165,7 @@ class ViewController: UIViewController {
         let res = (Int(self.currentAngle)).magnitude
         var rightVal = res.advanced(by: variance)
         let totalCount = Capitals.allCases.count
+        var tappedElement = ""
         Capitals.allCases.forEach{
             if rightVal.magnitude > 360 {
                 rightVal = rightVal.magnitude % 360
@@ -173,21 +174,32 @@ class ViewController: UIViewController {
             
             if max == $0.rawValue{
                 if !isTurningToLeft{
-                    print("Right \($0)")
+                    //print("Right \($0)")
+                    tappedElement = "\($0)"
                     return
                 }else{
                     if totalCount % 2 == 0 && ($0.rawValue == 0 || $0.rawValue == totalCount/2) {
-                        print("Left \($0)")
+                        //print("Left \($0)")
+                        tappedElement = "\($0)"
                         return
                     }else{
-                        print("STG WRONG \($0)")
+                        //print("STG WRONG \($0)")
                         #warning("For 3 Values Only")
-                        //TODO: STG WRONG IN HERE
-                        return
+                        tappedElement = currentAngle < 0 ? "\($0)" : $0.rawValue == 2 ? "\(Capitals.allCases[1])" : $0.rawValue == 1 ?
+                        "\(Capitals.allCases[2])" : "\($0)"
+                       
                     }
                 }
             }
         }
+        print(tappedElement)
+        self.showAlert("3D carousel", tappedElement)
+    }
+    
+    func showAlert(_ head: String, _ text: String){
+        let alert = UIAlertController(title: head, message: text, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true)
     }
 }
 
