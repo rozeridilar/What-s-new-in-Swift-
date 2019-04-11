@@ -12,7 +12,9 @@ enum Capitals: Int, CaseIterable{
     case amsterdam = 0
     ,london = 1
     ,budapest = 2
-    //,ankara = "ankara",madrid = "madrid",paris = "paris"
+//    ,ankara = 3
+//    ,madrid = 4
+//    ,paris = 5
     //,rome = "rome"
 }
 
@@ -146,10 +148,11 @@ class ViewController: UIViewController {
         
         currentOffset += xDiff
         currentAngle += xDiff
-        
+        //        print("xOffset \(xOffset)")
+        //        print("xxDiff \(xDiff)")
         //What If XOffset == 0 ?
         isTurningToLeft = xOffset > 0 ? true : false
-        
+        print("Is Turning to left?   \(isTurningToLeft)")
         turnCrousel()
     }
     
@@ -160,36 +163,31 @@ class ViewController: UIViewController {
         let layerAngle = 360 / Capitals.allCases.count
         let variance = 25
         let res = (Int(self.currentAngle)).magnitude
-        var maxVal = res.advanced(by: variance)
-        var minVal = res.distance(to: UInt(variance))
-        
+        var rightVal = res.advanced(by: variance)
+        let totalCount = Capitals.allCases.count
         Capitals.allCases.forEach{
-           
-            if maxVal.magnitude > 360 {
-                maxVal = maxVal.magnitude % 360
+            if rightVal.magnitude > 360 {
+                rightVal = rightVal.magnitude % 360
             }
-            if minVal.magnitude > 360 {
-                minVal = Int(minVal.magnitude % 360)
-            }
+            let max = rightVal / layerAngle.magnitude
             
-            let max = maxVal / layerAngle.magnitude
-            let min = (minVal / layerAngle).magnitude
-            
-   //         if !isTurningToLeft{
-            
-                if max == $0.rawValue{
-                    print("\($0)")
+            if max == $0.rawValue{
+                if !isTurningToLeft{
+                    print("Right \($0)")
                     return
+                }else{
+                    if totalCount % 2 == 0 && ($0.rawValue == 0 || $0.rawValue == totalCount/2) {
+                        print("Left \($0)")
+                        return
+                    }else{
+                        print("STG WRONG \($0)")
+                        #warning("For 3 Values Only")
+                        //TODO: STG WRONG IN HERE
+                        return
+                    }
                 }
-//            }else{
-//                if min == $0.rawValue{
-//                    print("\($0)")
-//                    return
-//                }
-//            }
-            
+            }
         }
     }
-    
 }
 
