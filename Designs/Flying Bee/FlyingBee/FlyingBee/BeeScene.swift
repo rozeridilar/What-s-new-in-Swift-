@@ -112,13 +112,15 @@ class BeeScene: SKScene {
         let maxY = (touch?.location(in: self).y)! + 20
         let minY = (touch?.location(in: self).y)! - 20
        
-        self.backgroundColor = backColor
+
        
         if x < Int(maxX) && x > Int(minX) {
             if y < Int(maxY) && y > Int(minY) {
                 self.bee?.removeAllActions()
                 self.bee?.removeFromParent()
                 NotificationCenter.default.post(name: Notification.Name(BeeDestroy), object: nil)
+                //change background color with beeColor
+                self.backgroundColor = backColor
                 flyBee()
             }
         }
