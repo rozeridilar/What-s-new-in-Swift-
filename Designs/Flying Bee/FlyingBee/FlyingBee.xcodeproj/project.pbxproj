@@ -14,6 +14,8 @@
 		DD2E89F3226461FC00C6BC9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD2E89F1226461FC00C6BC9F /* LaunchScreen.storyboard */; };
 		DD2E89FB2264629400C6BC9F /* Bee.atlas in Resources */ = {isa = PBXBuildFile; fileRef = DD2E89FA2264629400C6BC9F /* Bee.atlas */; };
 		DD2E89FD2264649600C6BC9F /* BeeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2E89FC2264649600C6BC9F /* BeeScene.swift */; };
+		DD2E8A032264A22900C6BC9F /* bee.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD2E8A022264A22900C6BC9F /* bee.mp3 */; };
+		DD2E8A072264A41F00C6BC9F /* rain.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD2E8A062264A41F00C6BC9F /* rain.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		DD2E89F4226461FC00C6BC9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD2E89FA2264629400C6BC9F /* Bee.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Bee.atlas; sourceTree = "<group>"; };
 		DD2E89FC2264649600C6BC9F /* BeeScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeeScene.swift; sourceTree = "<group>"; };
+		DD2E8A022264A22900C6BC9F /* bee.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bee.mp3; sourceTree = "<group>"; };
+		DD2E8A062264A41F00C6BC9F /* rain.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rain.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +62,13 @@
 		DD2E89E7226461FA00C6BC9F /* FlyingBee */ = {
 			isa = PBXGroup;
 			children = (
+				DD2E8A062264A41F00C6BC9F /* rain.mp3 */,
 				DD2E89FC2264649600C6BC9F /* BeeScene.swift */,
 				DD2E89FA2264629400C6BC9F /* Bee.atlas */,
 				DD2E89E8226461FA00C6BC9F /* AppDelegate.swift */,
 				DD2E89EA226461FA00C6BC9F /* ViewController.swift */,
 				DD2E89EC226461FA00C6BC9F /* Main.storyboard */,
+				DD2E8A022264A22900C6BC9F /* bee.mp3 */,
 				DD2E89EF226461FC00C6BC9F /* Assets.xcassets */,
 				DD2E89F1226461FC00C6BC9F /* LaunchScreen.storyboard */,
 				DD2E89F4226461FC00C6BC9F /* Info.plist */,
@@ -129,6 +135,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD2E89FB2264629400C6BC9F /* Bee.atlas in Resources */,
+				DD2E8A032264A22900C6BC9F /* bee.mp3 in Resources */,
+				DD2E8A072264A41F00C6BC9F /* rain.mp3 in Resources */,
 				DD2E89F3226461FC00C6BC9F /* LaunchScreen.storyboard in Resources */,
 				DD2E89F0226461FC00C6BC9F /* Assets.xcassets in Resources */,
 				DD2E89EE226461FA00C6BC9F /* Main.storyboard in Resources */,

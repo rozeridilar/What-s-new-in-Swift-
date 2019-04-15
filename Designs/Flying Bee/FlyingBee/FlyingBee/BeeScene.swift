@@ -10,7 +10,7 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
-
+let BeeDestroy: String = "BeeDestroy"
 class BeeScene: SKScene {
 
     var beeFrames: [SKTexture]?
@@ -102,6 +102,7 @@ class BeeScene: SKScene {
             if y < Int(maxY) && y > Int(minY) {
                 self.bee?.removeAllActions()
                 self.bee?.removeFromParent()
+                NotificationCenter.default.post(name: Notification.Name(BeeDestroy), object: nil)
                 flyBee()
             }
         }
