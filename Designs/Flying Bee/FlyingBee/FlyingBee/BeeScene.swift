@@ -22,7 +22,7 @@ class BeeScene: SKScene {
     
     override init(size: CGSize) {
         super.init(size: size)
-        self.backgroundColor = .green
+        self.backgroundColor = .black
         
         var frames:[SKTexture] = []
         
