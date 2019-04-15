@@ -10,15 +10,30 @@ import UIKit
 import SpriteKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var sceneView: SKView!
     
     var scene: BeeScene?
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action:
+            #selector(handleTap(_:)))
+        sceneView.addGestureRecognizer(tapGesture)
+        
     }
-
+    @objc func handleTap(_ gestureRecognize: UIGestureRecognizer) {
+        
+        // retrieve the SCNView
+        let scnView = self.sceneView
+        
+        // check what nodes are tapped
+        let p = gestureRecognize.location(in: scnView)
+       print(p)
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
