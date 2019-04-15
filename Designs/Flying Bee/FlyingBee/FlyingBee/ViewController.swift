@@ -25,8 +25,21 @@ class ViewController: UIViewController {
         //   sceneView.addGestureRecognizer(tapGesture)
         NotificationCenter.default.addObserver(self, selector: #selector(self.beeDestroyedNotf(notification:)), name: Notification.Name(BeeDestroy), object: nil)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(self.showSelectedColor(_:)), name: NSNotification.Name(rawValue: BeeColorNotification), object: nil)
+
+        
         
     }
+    // handle notification
+    @objc func showSelectedColor(_ notification: NSNotification) {
+        print(notification.userInfo ?? "")
+        if let dict = notification.userInfo as NSDictionary? {
+            if let color = dict["color"] as? UIColor{
+                print("Color is \(color)")
+            }
+        }
+    }
+    
     var player: AVAudioPlayer?
     @objc func beeDestroyedNotf(notification: Notification) {
         playSound()

@@ -11,6 +11,11 @@ import SpriteKit
 import GameplayKit
 
 let BeeDestroy: String = "BeeDestroy"
+let BeeColorNotification: String = "BeeColor"
+
+let beeColors: [UIColor] = [.red,.green,.yellow,.blue,.purple]
+
+
 class BeeScene: SKScene {
 
     var beeFrames: [SKTexture]?
@@ -73,7 +78,7 @@ class BeeScene: SKScene {
         let time = TimeInterval(abs(distanceToCover / velocity))
         
         let moveAction = SKAction.moveBy(x: 0, y: distanceToCover, duration: time)
-        
+        //let colorizeAction = SKAction.colorize(with: UIColor.red, colorBlendFactor: 1, duration: 1)
         
         let removeAction = SKAction.run {
             self.bee!.removeAllActions()
@@ -81,7 +86,11 @@ class BeeScene: SKScene {
         }
         
         let allActions = SKAction.sequence([moveAction,removeAction])
-        
+        let randomColor = beeColors.randomElement()!
+        bee?.color = randomColor
+        let colorDataDict:[String: UIColor] = ["color" : randomColor]
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: BeeColorNotification), object: nil, userInfo: colorDataDict)
+        bee?.colorBlendFactor = 1
         bee!.run(allActions)
     }
     
