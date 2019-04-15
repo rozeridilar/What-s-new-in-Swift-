@@ -19,9 +19,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         
-        let tapGesture = UITapGestureRecognizer(target: self, action:
-            #selector(handleTap(_:)))
-        sceneView.addGestureRecognizer(tapGesture)
+      //  let tapGesture = UITapGestureRecognizer(target: self, action:
+      //      #selector(handleTap(_:)))
+     //   sceneView.addGestureRecognizer(tapGesture)
         
     }
     @objc func handleTap(_ gestureRecognize: UIGestureRecognizer) {
@@ -29,9 +29,9 @@ class ViewController: UIViewController {
         // retrieve the SCNView
         let scnView = self.sceneView
         
-        // check what nodes are tapped
-        let p = gestureRecognize.location(in: scnView)
-       print(p)
+//        // check what nodes are tapped
+//        let p = gestureRecognize.location(in: scnView)
+//       print(p)
     }
     
     override func viewDidAppear(_ animated: Bool) {
