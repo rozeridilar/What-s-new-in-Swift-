@@ -36,6 +36,7 @@ class ViewController: UIViewController {
         if let dict = notification.userInfo as NSDictionary? {
             if let color = dict["color"] as? UIColor{
                 print("Color is \(color)")
+               
             }
         }
     }

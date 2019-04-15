@@ -20,6 +20,7 @@ class BeeScene: SKScene {
 
     var beeFrames: [SKTexture]?
     var bee: SKSpriteNode?
+    var backColor: UIColor = .black
     
     //you always have to call required initializer if you want to have a ** custom initializer **
     required init?(coder aDecoder: NSCoder) {
@@ -28,7 +29,8 @@ class BeeScene: SKScene {
     
     override init(size: CGSize) {
         super.init(size: size)
-        self.backgroundColor = .black
+        
+        self.backgroundColor = backColor
         
         var frames:[SKTexture] = []
         
@@ -86,10 +88,13 @@ class BeeScene: SKScene {
         }
         
         let allActions = SKAction.sequence([moveAction,removeAction])
+        
         let randomColor = beeColors.randomElement()!
         bee?.color = randomColor
+        backColor = randomColor
         let colorDataDict:[String: UIColor] = ["color" : randomColor]
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: BeeColorNotification), object: nil, userInfo: colorDataDict)
+        
         bee?.colorBlendFactor = 1
         bee!.run(allActions)
     }
@@ -106,7 +111,9 @@ class BeeScene: SKScene {
         let y = Int((bee?.position.y)!)
         let maxY = (touch?.location(in: self).y)! + 20
         let minY = (touch?.location(in: self).y)! - 20
-        
+       
+        self.backgroundColor = backColor
+       
         if x < Int(maxX) && x > Int(minX) {
             if y < Int(maxY) && y > Int(minY) {
                 self.bee?.removeAllActions()
