@@ -10,7 +10,7 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
-
+let BeeDestroy: String = "BeeDestroy"
 class BeeScene: SKScene {
 
     var beeFrames: [SKTexture]?
@@ -45,12 +45,12 @@ class BeeScene: SKScene {
         
         bee!.size = CGSize(width: 140, height: 140)
         
-        let randomBeeYPositionGenerator = GKRandomDistribution(lowestValue: 50, highestValue: Int(self.frame.size.height))
-        let yPosition = CGFloat(randomBeeYPositionGenerator.nextInt())
+        let randomBeeXPositionGenerator = GKRandomDistribution(lowestValue: 50, highestValue: Int(self.frame.size.width))
+        let xPosition = CGFloat(randomBeeXPositionGenerator.nextInt())
         
         let rightToLeft = arc4random() % 2 == 0
         
-        let xPosition = rightToLeft ? self.frame.size.width + bee!.size.width / 2 : -bee!.size.width / 2
+        let yPosition = rightToLeft ? self.frame.size.height + bee!.size.height / 2 : -bee!.size.height / 2
         
         bee!.position = CGPoint(x: xPosition, y: yPosition)
         
@@ -62,7 +62,7 @@ class BeeScene: SKScene {
         
         bee!.run(SKAction.repeatForever(SKAction.animate(with: self.beeFrames!, timePerFrame: 0.05, resize: false, restore: true)))
         
-        var distanceToCover = self.frame.size.width + bee!.size.width
+        var distanceToCover = self.frame.size.height + bee!.size.height
         
         if rightToLeft {
             distanceToCover *= -1
@@ -72,7 +72,8 @@ class BeeScene: SKScene {
         
         let time = TimeInterval(abs(distanceToCover / velocity))
         
-        let moveAction = SKAction.moveBy(x: distanceToCover, y: 0, duration: time)
+        let moveAction = SKAction.moveBy(x: 0, y: distanceToCover, duration: time)
+        
         
         let removeAction = SKAction.run {
             self.bee!.removeAllActions()
@@ -99,9 +100,10 @@ class BeeScene: SKScene {
         
         if x < Int(maxX) && x > Int(minX) {
             if y < Int(maxY) && y > Int(minY) {
-
                 self.bee?.removeAllActions()
                 self.bee?.removeFromParent()
+                NotificationCenter.default.post(name: Notification.Name(BeeDestroy), object: nil)
+                flyBee()
             }
         }
         
