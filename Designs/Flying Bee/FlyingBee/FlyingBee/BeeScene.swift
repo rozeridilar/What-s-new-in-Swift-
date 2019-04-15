@@ -102,6 +102,7 @@ class BeeScene: SKScene {
             if y < Int(maxY) && y > Int(minY) {
                 self.bee?.removeAllActions()
                 self.bee?.removeFromParent()
+                flyBee()
             }
         }
         
