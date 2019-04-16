@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sfh-ev-guT">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <skView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sfh-ev-guT">
+                                <rect key="frame" x="0.0" y="48" width="375" height="619"/>
                             </skView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDs-gQ-GTT">
                                 <rect key="frame" x="120.5" y="315.5" width="134" height="36"/>
@@ -39,7 +39,7 @@
                             <constraint firstItem="Sfh-ev-guT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ZhY-8w-UK2"/>
                             <constraint firstItem="IDs-gQ-GTT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fvu-pg-TuI"/>
                             <constraint firstItem="IDs-gQ-GTT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qfx-Rk-qxY"/>
-                            <constraint firstItem="Sfh-ev-guT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xkk-sT-lJp"/>
+                            <constraint firstItem="Sfh-ev-guT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50" id="xkk-sT-lJp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

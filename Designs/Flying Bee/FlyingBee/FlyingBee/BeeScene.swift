@@ -98,7 +98,8 @@ class BeeScene: SKScene {
         bee?.colorBlendFactor = 1
         bee!.run(allActions)
     }
-    
+ 
+   
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first
         if bee?.position == touch?.location(in: self){
@@ -112,15 +113,22 @@ class BeeScene: SKScene {
         let maxY = (touch?.location(in: self).y)! + 20
         let minY = (touch?.location(in: self).y)! - 20
        
-
-       
         if x < Int(maxX) && x > Int(minX) {
             if y < Int(maxY) && y > Int(minY) {
+                
                 self.bee?.removeAllActions()
                 self.bee?.removeFromParent()
+                
                 NotificationCenter.default.post(name: Notification.Name(BeeDestroy), object: nil)
+                
                 //change background color with beeColor
-                self.backgroundColor = backColor
+                self.backgroundColor = backColor.withAlphaComponent(0.5)
+                
+                //+3.0 == waitTimeToChangeColorBack
+                DispatchQueue.main.asyncAfter(deadline: .now()+1.0 ) {
+                    self.backgroundColor = .black
+                }
+                
                 flyBee()
             }
         }

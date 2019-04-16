@@ -42,9 +42,9 @@ class ViewController: UIViewController {
     
     var player: AVAudioPlayer?
     @objc func beeDestroyedNotf(notification: Notification) {
-        playSound()
+       // playSound()
     }
-    
+  
     //    Make sure to change the name of your tune as well as the extension. The file needs to be properly imported (Project Build Phases > Copy Bundle Resources). You might want to place it in assets.xcassets for greater convenience.
     func playSound() {
         guard let url = Bundle.main.url(forResource: "bee_win", withExtension: "mp3") else { return }
