@@ -20,22 +20,22 @@
                         <subviews>
                             <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sfh-ev-guT">
                                 <rect key="frame" x="0.0" y="107" width="375" height="560"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="560" id="dSA-Ve-HRN"/>
+                                </constraints>
                             </skView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bzc-VU-2O7">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bzc-VU-2O7">
                                 <rect key="frame" x="16" y="20" width="343" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5bB-no-Fgh">
+                                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5bB-no-Fgh">
                                         <rect key="frame" x="-15" y="-20" width="375" height="670"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="Sae-uW-DXa">
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Sae-uW-DXa">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="670"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dYC-ZV-bYm">
+                                                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dYC-ZV-bYm">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="670"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="2Jy-8d-0NO">
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2Jy-8d-0NO">
                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="670"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     </view>
@@ -44,19 +44,36 @@
                                                     </vibrancyEffect>
                                                 </visualEffectView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="dYC-ZV-bYm" secondAttribute="trailing" id="Ep9-Px-EcV"/>
+                                                <constraint firstItem="dYC-ZV-bYm" firstAttribute="top" secondItem="Sae-uW-DXa" secondAttribute="top" id="Mya-Sf-W5l"/>
+                                                <constraint firstAttribute="bottom" secondItem="dYC-ZV-bYm" secondAttribute="bottom" id="j2Z-Hf-Qmx"/>
+                                                <constraint firstItem="dYC-ZV-bYm" firstAttribute="leading" secondItem="Sae-uW-DXa" secondAttribute="leading" id="xjV-ZQ-0iw"/>
+                                            </constraints>
                                         </view>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="670" id="vRV-2s-Ah7"/>
+                                        </constraints>
                                         <blurEffect style="light"/>
                                     </visualEffectView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="5bB-no-Fgh" firstAttribute="top" secondItem="Bzc-VU-2O7" secondAttribute="top" constant="-20" id="RBl-cb-b13"/>
+                                    <constraint firstAttribute="trailing" secondItem="5bB-no-Fgh" secondAttribute="trailing" constant="-17" id="Tdz-gV-0PE"/>
+                                    <constraint firstItem="5bB-no-Fgh" firstAttribute="leading" secondItem="Bzc-VU-2O7" secondAttribute="leading" constant="-15" id="pSW-1T-j4D"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sfh-ev-guT" secondAttribute="trailing" id="3I7-9Y-NDC"/>
-                            <constraint firstItem="Sfh-ev-guT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="87" id="Nev-ZX-OM4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Sfh-ev-guT" secondAttribute="bottom" id="iqV-DO-Gbw"/>
-                            <constraint firstItem="Sfh-ev-guT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sYF-5g-O0y"/>
+                            <constraint firstItem="Bzc-VU-2O7" firstAttribute="centerX" secondItem="Sfh-ev-guT" secondAttribute="centerX" id="34c-pE-jDF"/>
+                            <constraint firstItem="Bzc-VU-2O7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AVh-Gd-0zp"/>
+                            <constraint firstItem="Sfh-ev-guT" firstAttribute="top" secondItem="Bzc-VU-2O7" secondAttribute="bottom" constant="8" symbolic="YES" id="CnJ-LX-1CA"/>
+                            <constraint firstItem="Bzc-VU-2O7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Dxe-sz-QxE"/>
+                            <constraint firstItem="Sfh-ev-guT" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Te5-AE-ZHC"/>
+                            <constraint firstAttribute="trailing" secondItem="Sfh-ev-guT" secondAttribute="trailing" id="bbm-Hn-b0i"/>
+                            <constraint firstItem="Sfh-ev-guT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uMq-f0-wP1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

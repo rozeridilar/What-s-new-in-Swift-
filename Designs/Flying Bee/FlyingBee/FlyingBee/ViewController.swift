@@ -78,9 +78,12 @@ class ViewController: UIViewController {
             print(error.localizedDescription)
         }
     }
-    
+    var gameOver:Bool = false
     @objc func beeGameOver(_ notification: NSNotification){
-        animateInRestartView()
+        if !gameOver{
+            animateInRestartView()
+            gameOver = true
+        }
     }
     
     func animateInRestartView(){
