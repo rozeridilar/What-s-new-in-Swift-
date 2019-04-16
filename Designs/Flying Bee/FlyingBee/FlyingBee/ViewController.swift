@@ -25,9 +25,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        
+        //removing visual effect on start of app
         effect = visualEffectView.effect
         visualEffectView.effect = nil
+        
+        //adding cornerradius to restartview
+        restartView.layer.cornerRadius = 5
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.beeDestroyedNotf(notification:)), name: Notification.Name(BeeDestroy), object: nil)
         
@@ -77,7 +80,21 @@ class ViewController: UIViewController {
     }
     
     @objc func beeGameOver(_ notification: NSNotification){
+        animateInRestartView()
+    }
+    
+    func animateInRestartView(){
+        self.view.addSubview(restartView)
+        restartView.center = self.view.center
         
+        restartView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+        restartView.alpha = 0
+        
+        UIView.animate(withDuration: 0.4) {
+            self.visualEffectView.effect = self.effect
+            self.restartView.alpha = 1
+            self.restartView.transform = CGAffineTransform.identity
+        }
     }
     
     @objc func handleTap(_ gestureRecognize: UIGestureRecognizer) {
