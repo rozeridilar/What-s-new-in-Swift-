@@ -10,6 +10,8 @@ import UIKit
 import SpriteKit
 import AVFoundation
 
+let beeHeight = "beeHeight"
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var sceneView: SKView!
@@ -113,7 +115,7 @@ class ViewController: UIViewController {
     @objc func handleTap(_ gestureRecognize: UIGestureRecognizer) {
         
         // retrieve the SCNView
-        let scnView = self.sceneView
+       // let scnView = self.sceneView
         
         //        // check what nodes are tapped
         //        let p = gestureRecognize.location(in: scnView)
@@ -129,6 +131,10 @@ class ViewController: UIViewController {
             return
         }
         scene.flyBee()
+        
+        let beeScreenHeight:[String: Int] = [beeHeight : Int(self.sceneView.bounds.height)]
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: BeeScreenHeightNotification), object: nil, userInfo: beeScreenHeight)
+        
     }
     @IBAction func bringTheBees(_ sender: Any) {
         guard let scene = self.scene else {

@@ -13,6 +13,7 @@ import GameplayKit
 let BeeDestroy: String = "BeeDestroy"
 let BeeColorNotification: String = "BeeColor"
 let BeeGameOverNotification: String = "BeeGameOver"
+let BeeScreenHeightNotification: String = "BeeScreenHeightNotification"
 
 let beeColors: [UIColor] = [.red,.green,.yellow,.blue,.purple]
 
@@ -22,7 +23,7 @@ class BeeScene: SKScene {
     var beeFrames: [SKTexture]?
     var bee: SKSpriteNode?
     var backColor: UIColor = .black
-    
+    var beeScreenHeight: Int = 0
     //you always have to call required initializer if you want to have a ** custom initializer **
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -42,6 +43,7 @@ class BeeScene: SKScene {
             let texture = beeAtlas.textureNamed(textureName)
             frames.append(texture)
         }
+        
         
         self.beeFrames = frames
         self.bee = SKSpriteNode(texture: frames[0])
@@ -142,7 +144,8 @@ class BeeScene: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
         super.update(currentTime)
-        if bee!.position.y < -bee!.size.height/2.0 || bee!.position.y > (self.view?.bounds.height)! +  bee!.size.height/2.0{
+        let height = bee?.size.height ?? 30
+        if bee!.position.y < -height/2.0 || bee!.position.y > (self.view?.bounds.height)!{
             bee!.removeFromParent()
             gameOver()
         }
