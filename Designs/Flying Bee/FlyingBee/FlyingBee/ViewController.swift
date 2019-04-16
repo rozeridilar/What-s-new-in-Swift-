@@ -109,6 +109,10 @@ class ViewController: UIViewController {
             self.visualEffectView.effect = nil
         }) { (success: Bool) in
             self.restartView.removeFromSuperview()
+            if let scene = self.scene{
+                scene.flyBee()
+                self.gameOver = false
+            }
         }
     }
     
@@ -144,10 +148,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func restartAction(_ sender: Any) {
+         animateOutRestartView()
     }
     
     @IBAction func stopAction(_ sender: Any) {
-        animateOutRestartView()
+       //should dismiss the main view 
     }
     
 }
