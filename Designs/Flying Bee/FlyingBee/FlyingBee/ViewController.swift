@@ -44,7 +44,7 @@ class ViewController: UIViewController {
     
     // handle notification
     @objc func showSelectedColor(_ notification: NSNotification) {
-        print(notification.userInfo ?? "")
+       // print(notification.userInfo ?? "")
         if let dict = notification.userInfo as NSDictionary? {
             if let color = dict["color"] as? UIColor{
                // print("Color is \(color)")

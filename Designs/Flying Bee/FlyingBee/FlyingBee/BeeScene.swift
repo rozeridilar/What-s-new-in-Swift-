@@ -19,7 +19,7 @@ let beeColors: [UIColor] = [.red,.green,.yellow,.blue,.purple]
 
 
 class BeeScene: SKScene {
-
+    
     var beeFrames: [SKTexture]?
     var bee: SKSpriteNode?
     var backColor: UIColor = .black
@@ -44,10 +44,19 @@ class BeeScene: SKScene {
             frames.append(texture)
         }
         
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.setBeeHeight(_:)), name: NSNotification.Name(rawValue: BeeScreenHeightNotification), object: nil)
         self.beeFrames = frames
         self.bee = SKSpriteNode(texture: frames[0])
     }
+    @objc func setBeeHeight(_ notification: NSNotification) {
+        if let dict = notification.userInfo as NSDictionary? {
+            if let h = dict[beeHeight] as? Int{
+                // print("Color is \(color)")
+                self.beeScreenHeight = h
+            }
+        }
+    }
+    var isGoingToDown: Bool = false
     
     func flyBee(){
         let texture = self.beeFrames![0]
@@ -67,6 +76,8 @@ class BeeScene: SKScene {
         if rightToLeft{
             bee!.xScale = -1
         }
+       
+        isGoingToDown = rightToLeft
         
         self.addChild(bee!)
         
@@ -101,8 +112,8 @@ class BeeScene: SKScene {
         bee?.colorBlendFactor = 1
         bee!.run(allActions)
     }
- 
-   
+    
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first
         if bee?.position == touch?.location(in: self){
@@ -115,12 +126,12 @@ class BeeScene: SKScene {
         let y = Int((bee?.position.y)!)
         let maxY = (touch?.location(in: self).y)! + 20
         let minY = (touch?.location(in: self).y)! - 20
-       
+        
         if x < Int(maxX) && x > Int(minX) {
             if y < Int(maxY) && y > Int(minY) {
                 
                 NotificationCenter.default.post(name: Notification.Name(BeeDestroy), object: nil)
-            
+                
                 //change background color with beeColor
                 self.backgroundColor = backColor.withAlphaComponent(0.5)
                 let pos = bee?.position
@@ -145,9 +156,15 @@ class BeeScene: SKScene {
     override func update(_ currentTime: TimeInterval) {
         super.update(currentTime)
         let height = bee?.size.height ?? 30
-        if bee!.position.y < -height/2.0 || bee!.position.y > (self.view?.bounds.height)!{
+        if bee!.position.y < -height/2.0 {
             bee!.removeFromParent()
             gameOver()
+        }
+        if beeScreenHeight != 0 && !isGoingToDown{
+            if Int(bee!.position.y) == beeScreenHeight + Int(height/2.0){
+                bee!.removeFromParent()
+                gameOver()
+            }
         }
     }
     
