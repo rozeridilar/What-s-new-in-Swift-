@@ -9,6 +9,8 @@
 import UIKit
 import SpriteKit
 import GameplayKit
+import AVFoundation
+
 
 let BeeDestroy: String = "BeeDestroy"
 let BeeColorNotification: String = "BeeColor"
@@ -148,7 +150,16 @@ class BeeScene: SKScene {
         emitter?.position = pos
         addChild(emitter!)
         self.backgroundColor = .purple
+        playSound(text: "Hello, World")
         flyBee()
+    }
+    
+    func playSound(text: String){
+        let utterance = AVSpeechUtterance(string: text)
+        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+        
+        let synth = AVSpeechSynthesizer()
+        synth.speak(utterance)
     }
     
     override func update(_ currentTime: TimeInterval) {
