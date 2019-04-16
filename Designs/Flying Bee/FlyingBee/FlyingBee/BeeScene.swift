@@ -142,7 +142,7 @@ class BeeScene: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
         super.update(currentTime)
-        if bee!.position.y < -bee!.size.height/2.0 {
+        if bee!.position.y < -bee!.size.height/2.0 || bee!.position.y > (self.view?.bounds.height)! +  bee!.size.height/2.0{
             bee!.removeFromParent()
             gameOver()
         }
