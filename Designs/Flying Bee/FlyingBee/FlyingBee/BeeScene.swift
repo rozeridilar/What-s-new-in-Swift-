@@ -150,7 +150,7 @@ class BeeScene: SKScene {
         emitter?.position = pos
         addChild(emitter!)
         self.backgroundColor = .purple
-        playSound(text: "Hello, World")
+        playSound(text: "Colour")
         flyBee()
     }
     
