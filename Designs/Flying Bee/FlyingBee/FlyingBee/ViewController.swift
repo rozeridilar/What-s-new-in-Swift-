@@ -99,6 +99,16 @@ class ViewController: UIViewController {
             self.restartView.transform = CGAffineTransform.identity
         }
     }
+    func animateOutRestartView(){
+        UIView.animate(withDuration: 0.3, animations: {
+            self.restartView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+            self.restartView.alpha = 0
+            
+            self.visualEffectView.effect = nil
+        }) { (success: Bool) in
+            self.restartView.removeFromSuperview()
+        }
+    }
     
     @objc func handleTap(_ gestureRecognize: UIGestureRecognizer) {
         
@@ -131,6 +141,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func stopAction(_ sender: Any) {
+        animateOutRestartView()
     }
     
 }
