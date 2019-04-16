@@ -12,6 +12,7 @@ import GameplayKit
 
 let BeeDestroy: String = "BeeDestroy"
 let BeeColorNotification: String = "BeeColor"
+let BeeGameOverNotification: String = "BeeGameOver"
 
 let beeColors: [UIColor] = [.red,.green,.yellow,.blue,.purple]
 
@@ -146,7 +147,10 @@ class BeeScene: SKScene {
             gameOver()
         }
     }
+    
     func gameOver(){
         print("game over")
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: BeeGameOverNotification), object: nil)
     }
+    
 }

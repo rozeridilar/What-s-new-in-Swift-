@@ -14,6 +14,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var sceneView: SKView!
     @IBOutlet weak var colorView: UIView!
+    @IBOutlet var restartView: UIView!
+    @IBOutlet weak var visualEffectView: UIVisualEffectView!
+   
     
     var scene: BeeScene?
     override func viewDidLoad() {
@@ -27,6 +30,8 @@ class ViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(self.beeDestroyedNotf(notification:)), name: Notification.Name(BeeDestroy), object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.showSelectedColor(_:)), name: NSNotification.Name(rawValue: BeeColorNotification), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.beeGameOver(_:)), name: NSNotification.Name(rawValue: BeeGameOverNotification), object: nil)
         
     }
     
@@ -69,6 +74,10 @@ class ViewController: UIViewController {
         }
     }
     
+    @objc func beeGameOver(_ notification: NSNotification){
+        
+    }
+    
     @objc func handleTap(_ gestureRecognize: UIGestureRecognizer) {
         
         // retrieve the SCNView
@@ -94,6 +103,12 @@ class ViewController: UIViewController {
             return
         }
         scene.flyBee()
+    }
+    
+    @IBAction func restartAction(_ sender: Any) {
+    }
+    
+    @IBAction func stopAction(_ sender: Any) {
     }
     
 }
