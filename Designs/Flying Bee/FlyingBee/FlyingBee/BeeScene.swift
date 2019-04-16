@@ -15,14 +15,14 @@ let BeeColorNotification: String = "BeeColor"
 let BeeGameOverNotification: String = "BeeGameOver"
 let BeeScreenHeightNotification: String = "BeeScreenHeightNotification"
 
-let beeColors: [UIColor] = [.red,.green,.yellow,.blue,.purple]
+let beeColors: [UIColor] = [UIColor.init(displayP3Red: 239, green: 233, blue: 93, alpha: 0.9),UIColor.init(displayP3Red: 169, green: 206, blue: 80, alpha: 0.9),UIColor.init(displayP3Red: 73, green: 181, blue: 227, alpha: 0.9),UIColor.init(displayP3Red: 242, green: 176, blue: 77, alpha: 0.9)]
 
 
 class BeeScene: SKScene {
     
     var beeFrames: [SKTexture]?
     var bee: SKSpriteNode?
-    var backColor: UIColor = .black
+    var backColor: UIColor = .purple
     var beeScreenHeight: Int = 0
     //you always have to call required initializer if you want to have a ** custom initializer **
     required init?(coder aDecoder: NSCoder) {
