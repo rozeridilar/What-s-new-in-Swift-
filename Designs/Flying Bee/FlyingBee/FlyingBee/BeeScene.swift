@@ -15,7 +15,7 @@ let BeeColorNotification: String = "BeeColor"
 let BeeGameOverNotification: String = "BeeGameOver"
 let BeeScreenHeightNotification: String = "BeeScreenHeightNotification"
 
-let beeColors: [UIColor] = [UIColor.init(displayP3Red: 239, green: 233, blue: 93, alpha: 0.9),UIColor.init(displayP3Red: 169, green: 206, blue: 80, alpha: 0.9),UIColor.init(displayP3Red: 73, green: 181, blue: 227, alpha: 0.9),UIColor.init(displayP3Red: 242, green: 176, blue: 77, alpha: 0.9)]
+let beeColors: [UIColor] = [.red,.green,.yellow,.blue,.purple]
 
 
 class BeeScene: SKScene {
@@ -76,9 +76,7 @@ class BeeScene: SKScene {
         if rightToLeft{
             bee!.xScale = -1
         }
-       
         isGoingToDown = rightToLeft
-        
         self.addChild(bee!)
         
         bee!.run(SKAction.repeatForever(SKAction.animate(with: self.beeFrames!, timePerFrame: 0.05, resize: false, restore: true)))
@@ -149,7 +147,7 @@ class BeeScene: SKScene {
         let emitter = SKEmitterNode(fileNamed: "gem")
         emitter?.position = pos
         addChild(emitter!)
-        self.backgroundColor = .black
+        self.backgroundColor = .purple
         flyBee()
     }
     
