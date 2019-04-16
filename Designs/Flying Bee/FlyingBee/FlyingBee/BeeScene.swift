@@ -138,4 +138,15 @@ class BeeScene: SKScene {
         self.backgroundColor = .black
         flyBee()
     }
+    
+    override func update(_ currentTime: TimeInterval) {
+        super.update(currentTime)
+        if bee!.position.y < -bee!.size.height/2.0 {
+            bee!.removeFromParent()
+            gameOver()
+        }
+    }
+    func gameOver(){
+        print("game over")
+    }
 }
