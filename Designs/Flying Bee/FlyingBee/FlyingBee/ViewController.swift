@@ -19,14 +19,16 @@ class ViewController: UIViewController {
    
     
     var scene: BeeScene?
+    var effect: UIVisualEffect!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         
-        //  let tapGesture = UITapGestureRecognizer(target: self, action:
-        //      #selector(handleTap(_:)))
-        //   sceneView.addGestureRecognizer(tapGesture)
+        effect = visualEffectView.effect
+        visualEffectView.effect = nil
+        
         NotificationCenter.default.addObserver(self, selector: #selector(self.beeDestroyedNotf(notification:)), name: Notification.Name(BeeDestroy), object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.showSelectedColor(_:)), name: NSNotification.Name(rawValue: BeeColorNotification), object: nil)
