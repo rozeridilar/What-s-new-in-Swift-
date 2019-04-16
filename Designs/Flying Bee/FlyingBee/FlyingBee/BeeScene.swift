@@ -15,7 +15,7 @@ let BeeColorNotification: String = "BeeColor"
 let BeeGameOverNotification: String = "BeeGameOver"
 let BeeScreenHeightNotification: String = "BeeScreenHeightNotification"
 
-let beeColors: [UIColor] = [.red,.green,.yellow,.blue,.purple]
+let beeColors: [UIColor] = [UIColor(rgb: 0xdf0c8a),UIColor(rgb: 0xf2b04d),UIColor(rgb: 0x49b5e3),UIColor(rgb: 0xa9ce50),UIColor(rgb: 0xefe95d)]
 
 
 class BeeScene: SKScene {
