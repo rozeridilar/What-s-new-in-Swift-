@@ -116,22 +116,26 @@ class BeeScene: SKScene {
         if x < Int(maxX) && x > Int(minX) {
             if y < Int(maxY) && y > Int(minY) {
                 
-                self.bee?.removeAllActions()
-                self.bee?.removeFromParent()
-                
                 NotificationCenter.default.post(name: Notification.Name(BeeDestroy), object: nil)
-                
+            
                 //change background color with beeColor
                 self.backgroundColor = backColor.withAlphaComponent(0.5)
-                
+                let pos = bee?.position
+                self.bee?.removeAllActions()
+                bee?.removeFromParent()
                 //+3.0 == waitTimeToChangeColorBack
-                DispatchQueue.main.asyncAfter(deadline: .now()+1.0 ) {
-                    self.backgroundColor = .black
-                }
-                
-                flyBee()
+                self.explodeGem(pos!)
             }
         }
         
+    }
+    
+    
+    func explodeGem(_ pos: CGPoint){
+        let emitter = SKEmitterNode(fileNamed: "gem")
+        emitter?.position = pos
+        addChild(emitter!)
+        self.backgroundColor = .black
+        flyBee()
     }
 }

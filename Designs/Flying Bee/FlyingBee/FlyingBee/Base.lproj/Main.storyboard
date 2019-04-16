@@ -18,32 +18,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <skView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sfh-ev-guT">
-                                <rect key="frame" x="0.0" y="48" width="375" height="619"/>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sfh-ev-guT">
+                                <rect key="frame" x="0.0" y="107" width="375" height="560"/>
                             </skView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDs-gQ-GTT">
-                                <rect key="frame" x="120.5" y="315.5" width="134" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <state key="normal" title="Bring The Bee!">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="bringTheBees:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bqx-uM-jXA"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bzc-VU-2O7">
+                                <rect key="frame" x="16" y="20" width="343" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Sfh-ev-guT" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="FPh-lS-ekf"/>
-                            <constraint firstItem="Sfh-ev-guT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LHj-gC-LeP"/>
-                            <constraint firstItem="Sfh-ev-guT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ZhY-8w-UK2"/>
-                            <constraint firstItem="IDs-gQ-GTT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fvu-pg-TuI"/>
-                            <constraint firstItem="IDs-gQ-GTT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qfx-Rk-qxY"/>
-                            <constraint firstItem="Sfh-ev-guT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50" id="xkk-sT-lJp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sfh-ev-guT" secondAttribute="trailing" id="3I7-9Y-NDC"/>
+                            <constraint firstItem="Sfh-ev-guT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="87" id="Nev-ZX-OM4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Sfh-ev-guT" secondAttribute="bottom" id="iqV-DO-Gbw"/>
+                            <constraint firstItem="Sfh-ev-guT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sYF-5g-O0y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="colorView" destination="Bzc-VU-2O7" id="qij-bY-AEk"/>
                         <outlet property="sceneView" destination="Sfh-ev-guT" id="Dag-Ck-070"/>
                     </connections>
                 </viewController>

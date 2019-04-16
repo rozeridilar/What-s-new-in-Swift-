@@ -15,10 +15,8 @@
 		DD2E89FB2264629400C6BC9F /* Bee.atlas in Resources */ = {isa = PBXBuildFile; fileRef = DD2E89FA2264629400C6BC9F /* Bee.atlas */; };
 		DD2E89FD2264649600C6BC9F /* BeeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2E89FC2264649600C6BC9F /* BeeScene.swift */; };
 		DD2E8A0B2264A4F300C6BC9F /* bee_win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD2E8A0A2264A4F300C6BC9F /* bee_win.mp3 */; };
-		DD2E8A102264C00D00C6BC9F /* confetti.png in Resources */ = {isa = PBXBuildFile; fileRef = DD2E8A0E2264C00D00C6BC9F /* confetti.png */; };
-		DD2E8A112264C00D00C6BC9F /* Confetti.scnp in Resources */ = {isa = PBXBuildFile; fileRef = DD2E8A0F2264C00D00C6BC9F /* Confetti.scnp */; };
-		DD2E8A142265A37E00C6BC9F /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = DD2E8A122265A37E00C6BC9F /* spark.png */; };
-		DD2E8A152265A37E00C6BC9F /* Trail.scnp in Resources */ = {isa = PBXBuildFile; fileRef = DD2E8A132265A37E00C6BC9F /* Trail.scnp */; };
+		DD2E8A182265AFB100C6BC9F /* gem.sks in Resources */ = {isa = PBXBuildFile; fileRef = DD2E8A162265AFB100C6BC9F /* gem.sks */; };
+		DD2E8A192265AFB100C6BC9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD2E8A172265AFB100C6BC9F /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,10 +30,8 @@
 		DD2E89FA2264629400C6BC9F /* Bee.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Bee.atlas; sourceTree = "<group>"; };
 		DD2E89FC2264649600C6BC9F /* BeeScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeeScene.swift; sourceTree = "<group>"; };
 		DD2E8A0A2264A4F300C6BC9F /* bee_win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bee_win.mp3; sourceTree = "<group>"; };
-		DD2E8A0E2264C00D00C6BC9F /* confetti.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = confetti.png; sourceTree = "<group>"; };
-		DD2E8A0F2264C00D00C6BC9F /* Confetti.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = Confetti.scnp; sourceTree = "<group>"; };
-		DD2E8A122265A37E00C6BC9F /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
-		DD2E8A132265A37E00C6BC9F /* Trail.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = Trail.scnp; sourceTree = "<group>"; };
+		DD2E8A162265AFB100C6BC9F /* gem.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = gem.sks; sourceTree = "<group>"; };
+		DD2E8A172265AFB100C6BC9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +65,6 @@
 			isa = PBXGroup;
 			children = (
 				DD2E8A0D2264BF6100C6BC9F /* Particles */,
-				DD2E8A0C2264BF5900C6BC9F /* New Group */,
 				DD2E8A0A2264A4F300C6BC9F /* bee_win.mp3 */,
 				DD2E89FC2264649600C6BC9F /* BeeScene.swift */,
 				DD2E89FA2264629400C6BC9F /* Bee.atlas */,
@@ -83,20 +78,11 @@
 			path = FlyingBee;
 			sourceTree = "<group>";
 		};
-		DD2E8A0C2264BF5900C6BC9F /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		DD2E8A0D2264BF6100C6BC9F /* Particles */ = {
 			isa = PBXGroup;
 			children = (
-				DD2E8A0E2264C00D00C6BC9F /* confetti.png */,
-				DD2E8A0F2264C00D00C6BC9F /* Confetti.scnp */,
-				DD2E8A122265A37E00C6BC9F /* spark.png */,
-				DD2E8A132265A37E00C6BC9F /* Trail.scnp */,
+				DD2E8A162265AFB100C6BC9F /* gem.sks */,
+				DD2E8A172265AFB100C6BC9F /* Assets.xcassets */,
 			);
 			path = Particles;
 			sourceTree = "<group>";
@@ -159,15 +145,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD2E8A112264C00D00C6BC9F /* Confetti.scnp in Resources */,
 				DD2E89FB2264629400C6BC9F /* Bee.atlas in Resources */,
 				DD2E89F3226461FC00C6BC9F /* LaunchScreen.storyboard in Resources */,
 				DD2E89F0226461FC00C6BC9F /* Assets.xcassets in Resources */,
-				DD2E8A152265A37E00C6BC9F /* Trail.scnp in Resources */,
+				DD2E8A182265AFB100C6BC9F /* gem.sks in Resources */,
+				DD2E8A192265AFB100C6BC9F /* Assets.xcassets in Resources */,
 				DD2E8A0B2264A4F300C6BC9F /* bee_win.mp3 in Resources */,
-				DD2E8A142265A37E00C6BC9F /* spark.png in Resources */,
 				DD2E89EE226461FA00C6BC9F /* Main.storyboard in Resources */,
-				DD2E8A102264C00D00C6BC9F /* confetti.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

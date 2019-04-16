@@ -13,6 +13,7 @@ import AVFoundation
 class ViewController: UIViewController {
     
     @IBOutlet weak var sceneView: SKView!
+    @IBOutlet weak var colorView: UIView!
     
     var scene: BeeScene?
     override func viewDidLoad() {
@@ -30,12 +31,14 @@ class ViewController: UIViewController {
         
         
     }
+    
     // handle notification
     @objc func showSelectedColor(_ notification: NSNotification) {
         print(notification.userInfo ?? "")
         if let dict = notification.userInfo as NSDictionary? {
             if let color = dict["color"] as? UIColor{
-                print("Color is \(color)")
+               // print("Color is \(color)")
+                self.colorView.backgroundColor = color
             }
         }
     }
@@ -83,6 +86,10 @@ class ViewController: UIViewController {
         
         self.scene = BeeScene(size: CGSize(width: self.sceneView.frame.size.width, height: self.sceneView.frame.size.height))
         self.sceneView.presentScene(scene)
+        guard let scene = self.scene else {
+            return
+        }
+        scene.flyBee()
     }
     @IBAction func bringTheBees(_ sender: Any) {
         guard let scene = self.scene else {
