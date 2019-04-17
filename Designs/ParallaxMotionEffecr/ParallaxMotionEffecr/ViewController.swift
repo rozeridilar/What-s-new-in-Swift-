@@ -16,7 +16,24 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        applyMotionEffect(toView: backgroundImageView, magnitude: 10)
+        applyMotionEffect(toView: monkey_image, magnitude: -20)
+    }
+    
+    func applyMotionEffect(toView view: UIView, magnitude: Float){
+        let xMotion = UIInterpolatingMotionEffect(keyPath: "center.x", type: .tiltAlongHorizontalAxis)
+        xMotion.maximumRelativeValue = magnitude
+        xMotion.minimumRelativeValue = -magnitude
+        
+        let yMotion = UIInterpolatingMotionEffect(keyPath: "center.y", type: .tiltAlongVerticalAxis)
+        yMotion.maximumRelativeValue = magnitude
+        yMotion.minimumRelativeValue = -magnitude
+        
+        let group = UIMotionEffectGroup()
+        group.motionEffects = [xMotion,yMotion]
+        
+        view.addMotionEffect(group)
     }
 
 
