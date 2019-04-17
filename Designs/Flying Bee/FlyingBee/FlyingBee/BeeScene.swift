@@ -139,14 +139,14 @@ class BeeScene: SKScene {
                 self.bee?.removeAllActions()
                 bee?.removeFromParent()
                 //+3.0 == waitTimeToChangeColorBack
-                self.explodeGem(pos!)
+                self.explodeGem(pos!,backColor)
             }
         }
         
     }
     
     
-    func explodeGem(_ pos: CGPoint){
+    func explodeGem(_ pos: CGPoint, _ colour: UIColor){
         let emitter = SKEmitterNode(fileNamed: "gem")
         emitter?.position = pos
         addChild(emitter!)
