@@ -21,12 +21,21 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ankara" translatesAutoresizingMaskIntoConstraints="NO" id="tho-DH-mHg" customClass="an">
                                 <rect key="frame" x="-50" y="-50" width="414" height="996"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="monkey_thinking" translatesAutoresizingMaskIntoConstraints="NO" id="f0G-Ki-SmS">
+                                <rect key="frame" x="138.5" y="640" width="137" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="PeY-dW-X97"/>
+                                    <constraint firstAttribute="width" constant="137" id="QGh-Zu-J8u"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="tho-DH-mHg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-50" id="6z1-Hq-6yU"/>
                             <constraint firstItem="tho-DH-mHg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-50" id="DHr-uq-otN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="f0G-Ki-SmS" secondAttribute="bottom" constant="42" id="KLN-oI-6Cd"/>
                             <constraint firstItem="tho-DH-mHg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-50" id="bQ5-fk-6Px"/>
+                            <constraint firstItem="f0G-Ki-SmS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ojD-kI-Q03"/>
                             <constraint firstAttribute="bottom" secondItem="tho-DH-mHg" secondAttribute="bottom" constant="-50" id="tEs-2s-Ki6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -34,10 +43,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="136.23188405797103" y="133.25892857142856"/>
         </scene>
     </scenes>
     <resources>
         <image name="ankara" width="1280" height="720"/>
+        <image name="monkey_thinking" width="300" height="300"/>
     </resources>
 </document>
