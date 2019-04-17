@@ -145,7 +145,6 @@ class BeeScene: SKScene {
         
     }
     
-    
     func explodeGem(_ pos: CGPoint, _ colour: UIColor){
         let emitter = SKEmitterNode(fileNamed: "gem")
         emitter?.position = pos
