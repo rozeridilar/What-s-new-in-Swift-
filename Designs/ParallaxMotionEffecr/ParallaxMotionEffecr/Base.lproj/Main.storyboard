@@ -40,6 +40,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="tho-DH-mHg" id="bcT-jU-tGb"/>
+                        <outlet property="monkey_image" destination="f0G-Ki-SmS" id="7vf-Om-jc6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
