@@ -35,7 +35,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="139"/>
                                             <color key="backgroundColor" red="0.29803921570000003" green="0.34509803919999998" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Djc-u9-o5I">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Djc-u9-o5I">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="104"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yrk-Iw-ptT">
@@ -100,6 +100,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="news gradient" width="16" height="16"/>
+        <image name="news gradient" width="400" height="200"/>
     </resources>
 </document>
