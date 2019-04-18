@@ -24,34 +24,34 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SimpleCollectionViewCell" id="2Qk-t3-Scq" customClass="SimpleCollectionViewCell" customModule="DovizKurlari" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SimpleCollectionViewCell" id="2Qk-t3-Scq" customClass="SimpleCollectionViewCell" customModule="CollectionView" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g2s-9F-prT" userLabel="Colored Image View">
-                                            <rect key="frame" x="0.0" y="0.0" width="200" height="139"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g2s-9F-prT" userLabel="Colored Image View">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                             <color key="backgroundColor" red="0.29803921570000003" green="0.34509803919999998" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Djc-u9-o5I">
-                                            <rect key="frame" x="0.0" y="0.0" width="200" height="104"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Djc-u9-o5I">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="160"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yrk-Iw-ptT">
-                                            <rect key="frame" x="0.0" y="141" width="200" height="59"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="news gradient" translatesAutoresizingMaskIntoConstraints="NO" id="tcV-rd-ONp" userLabel="news gradient">
+                                            <rect key="frame" x="0.0" y="91.333333333333314" width="200" height="68.666666666666686"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yrk-Iw-ptT">
+                                            <rect key="frame" x="0.0" y="159.66666666666666" width="200" height="40.333333333333343"/>
                                             <color key="backgroundColor" red="0.29803921570000003" green="0.34509803919999998" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="35"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="news gradient" translatesAutoresizingMaskIntoConstraints="NO" id="tcV-rd-ONp" userLabel="news gradient">
-                                            <rect key="frame" x="0.0" y="77" width="200" height="62"/>
-                                        </imageView>
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="tcV-rd-ONp" firstAttribute="top" secondItem="Djc-u9-o5I" secondAttribute="bottom" constant="-50" id="2oO-Cl-xaB"/>
+                                    <constraint firstItem="tcV-rd-ONp" firstAttribute="top" secondItem="Djc-u9-o5I" secondAttribute="bottom" constant="-68.666666666666657" id="1PG-Ka-ni9"/>
                                     <constraint firstItem="Djc-u9-o5I" firstAttribute="leading" secondItem="2Qk-t3-Scq" secondAttribute="leading" id="4Mr-pK-qYS"/>
                                     <constraint firstItem="Djc-u9-o5I" firstAttribute="top" secondItem="2Qk-t3-Scq" secondAttribute="top" id="5Fo-nb-EmT"/>
                                     <constraint firstAttribute="trailing" secondItem="Djc-u9-o5I" secondAttribute="trailing" id="8J8-LF-HcF"/>
@@ -59,13 +59,14 @@
                                     <constraint firstItem="tcV-rd-ONp" firstAttribute="leading" secondItem="Djc-u9-o5I" secondAttribute="leading" id="FCk-pr-puG"/>
                                     <constraint firstItem="tcV-rd-ONp" firstAttribute="trailing" secondItem="Djc-u9-o5I" secondAttribute="trailing" id="QIB-Qb-73u"/>
                                     <constraint firstItem="Djc-u9-o5I" firstAttribute="top" secondItem="g2s-9F-prT" secondAttribute="top" id="S4J-Yu-nie"/>
+                                    <constraint firstItem="Yrk-Iw-ptT" firstAttribute="top" secondItem="tcV-rd-ONp" secondAttribute="bottom" constant="-0.33333333333334281" id="XyB-RZ-pQ4"/>
                                     <constraint firstAttribute="bottom" secondItem="Yrk-Iw-ptT" secondAttribute="bottom" id="YKV-N9-Tw6"/>
                                     <constraint firstAttribute="trailing" secondItem="Yrk-Iw-ptT" secondAttribute="trailing" id="e3p-6V-eS4"/>
+                                    <constraint firstItem="Djc-u9-o5I" firstAttribute="bottom" secondItem="tcV-rd-ONp" secondAttribute="bottom" id="i36-Dl-q08"/>
                                     <constraint firstAttribute="trailing" secondItem="g2s-9F-prT" secondAttribute="trailing" id="lc5-dZ-brh"/>
-                                    <constraint firstItem="Yrk-Iw-ptT" firstAttribute="top" secondItem="g2s-9F-prT" secondAttribute="bottom" id="nxP-FU-Sjl"/>
                                     <constraint firstItem="g2s-9F-prT" firstAttribute="top" secondItem="2Qk-t3-Scq" secondAttribute="top" id="oBv-xB-lBF"/>
+                                    <constraint firstAttribute="bottom" secondItem="g2s-9F-prT" secondAttribute="bottom" id="oas-Jv-mkj"/>
                                     <constraint firstItem="Yrk-Iw-ptT" firstAttribute="leading" secondItem="2Qk-t3-Scq" secondAttribute="leading" id="rq8-B6-L0a"/>
-                                    <constraint firstItem="tcV-rd-ONp" firstAttribute="bottom" secondItem="g2s-9F-prT" secondAttribute="bottom" id="wGW-sw-psC"/>
                                 </constraints>
                                 <size key="customSize" width="200" height="200"/>
                                 <connections>
@@ -96,7 +97,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jFE-9g-GSf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="down" id="5aR-xL-Fn5"/>
             </objects>
-            <point key="canvasLocation" x="481" y="54"/>
+            <point key="canvasLocation" x="480.80000000000001" y="53.940886699507388"/>
         </scene>
     </scenes>
     <resources>
