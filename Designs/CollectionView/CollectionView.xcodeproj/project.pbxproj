@@ -15,6 +15,7 @@
 		DD88AC442268530900241D5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD88AC432268530900241D5B /* Assets.xcassets */; };
 		DD88AC472268530900241D5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD88AC452268530900241D5B /* LaunchScreen.storyboard */; };
 		DD88AC522268530900241D5B /* CollectinViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88AC512268530900241D5B /* CollectinViewTests.swift */; };
+		DD88AC5E2268587500241D5B /* CollectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88AC5D2268587500241D5B /* CollectionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		DD88AC4D2268530900241D5B /* CollectionViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectionViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD88AC512268530900241D5B /* CollectinViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectinViewTests.swift; sourceTree = "<group>"; };
 		DD88AC532268530900241D5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD88AC5D2268587500241D5B /* CollectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionModel.swift; sourceTree = "<group>"; };
 		EB92F76B17AF2E2449239B11 /* Pods-CollectinViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollectinViewTests.debug.xcconfig"; path = "Target Support Files/Pods-CollectinViewTests/Pods-CollectinViewTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +111,7 @@
 		DD88AC3B2268530700241D5B /* CollectinView */ = {
 			isa = PBXGroup;
 			children = (
+				DD88AC5C2268586200241D5B /* Model */,
 				DD88AC3C2268530700241D5B /* AppDelegate.swift */,
 				DD88AC3E2268530700241D5B /* ViewController.swift */,
 				DD88AC402268530700241D5B /* Main.storyboard */,
@@ -126,6 +129,14 @@
 				DD88AC532268530900241D5B /* Info.plist */,
 			);
 			path = CollectinViewTests;
+			sourceTree = "<group>";
+		};
+		DD88AC5C2268586200241D5B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DD88AC5D2268587500241D5B /* CollectionModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +314,7 @@
 			files = (
 				DD88AC3F2268530700241D5B /* ViewController.swift in Sources */,
 				DD88AC3D2268530700241D5B /* AppDelegate.swift in Sources */,
+				DD88AC5E2268587500241D5B /* CollectionModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
