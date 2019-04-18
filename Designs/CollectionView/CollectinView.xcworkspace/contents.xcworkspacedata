@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:CollectinView.xcodeproj">
+      location = "group:/Users/KIZILAY/Desktop/whats_new_in_swift/Designs/CollectionView/CollectionView.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

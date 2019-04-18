@@ -33,14 +33,14 @@
 		4A18FB3BC2BDBEDB51314D22 /* Pods-CollectinViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollectinViewTests.release.xcconfig"; path = "Target Support Files/Pods-CollectinViewTests/Pods-CollectinViewTests.release.xcconfig"; sourceTree = "<group>"; };
 		73BF89CC459364CE1B49193A /* Pods-CollectinView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollectinView.release.xcconfig"; path = "Target Support Files/Pods-CollectinView/Pods-CollectinView.release.xcconfig"; sourceTree = "<group>"; };
 		83B23E5B555D60826A423914 /* Pods_CollectinViewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CollectinViewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD88AC392268530700241D5B /* CollectinView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectinView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD88AC392268530700241D5B /* CollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD88AC3C2268530700241D5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD88AC3E2268530700241D5B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DD88AC412268530700241D5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD88AC432268530900241D5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD88AC462268530900241D5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD88AC482268530900241D5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DD88AC4D2268530900241D5B /* CollectinViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectinViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD88AC4D2268530900241D5B /* CollectionViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectionViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD88AC512268530900241D5B /* CollectinViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectinViewTests.swift; sourceTree = "<group>"; };
 		DD88AC532268530900241D5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB92F76B17AF2E2449239B11 /* Pods-CollectinViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollectinViewTests.debug.xcconfig"; path = "Target Support Files/Pods-CollectinViewTests/Pods-CollectinViewTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -83,7 +83,6 @@
 				EB92F76B17AF2E2449239B11 /* Pods-CollectinViewTests.debug.xcconfig */,
 				4A18FB3BC2BDBEDB51314D22 /* Pods-CollectinViewTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -101,8 +100,8 @@
 		DD88AC3A2268530700241D5B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DD88AC392268530700241D5B /* CollectinView.app */,
-				DD88AC4D2268530900241D5B /* CollectinViewTests.xctest */,
+				DD88AC392268530700241D5B /* CollectionView.app */,
+				DD88AC4D2268530900241D5B /* CollectionViewTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,9 +131,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DD88AC382268530700241D5B /* CollectinView */ = {
+		DD88AC382268530700241D5B /* CollectionView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DD88AC562268530900241D5B /* Build configuration list for PBXNativeTarget "CollectinView" */;
+			buildConfigurationList = DD88AC562268530900241D5B /* Build configuration list for PBXNativeTarget "CollectionView" */;
 			buildPhases = (
 				87A97EB9AFE79DE203C89213 /* [CP] Check Pods Manifest.lock */,
 				DD88AC352268530700241D5B /* Sources */,
@@ -146,14 +145,14 @@
 			);
 			dependencies = (
 			);
-			name = CollectinView;
+			name = CollectionView;
 			productName = CollectinView;
-			productReference = DD88AC392268530700241D5B /* CollectinView.app */;
+			productReference = DD88AC392268530700241D5B /* CollectionView.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DD88AC4C2268530900241D5B /* CollectinViewTests */ = {
+		DD88AC4C2268530900241D5B /* CollectionViewTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DD88AC592268530900241D5B /* Build configuration list for PBXNativeTarget "CollectinViewTests" */;
+			buildConfigurationList = DD88AC592268530900241D5B /* Build configuration list for PBXNativeTarget "CollectionViewTests" */;
 			buildPhases = (
 				6598C42F5A27975AA693FA59 /* [CP] Check Pods Manifest.lock */,
 				DD88AC492268530900241D5B /* Sources */,
@@ -165,9 +164,9 @@
 			dependencies = (
 				DD88AC4F2268530900241D5B /* PBXTargetDependency */,
 			);
-			name = CollectinViewTests;
+			name = CollectionViewTests;
 			productName = CollectinViewTests;
-			productReference = DD88AC4D2268530900241D5B /* CollectinViewTests.xctest */;
+			productReference = DD88AC4D2268530900241D5B /* CollectionViewTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -189,7 +188,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DD88AC342268530700241D5B /* Build configuration list for PBXProject "CollectinView" */;
+			buildConfigurationList = DD88AC342268530700241D5B /* Build configuration list for PBXProject "CollectionView" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -202,8 +201,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DD88AC382268530700241D5B /* CollectinView */,
-				DD88AC4C2268530900241D5B /* CollectinViewTests */,
+				DD88AC382268530700241D5B /* CollectionView */,
+				DD88AC4C2268530900241D5B /* CollectionViewTests */,
 			);
 		};
 /* End PBXProject section */
@@ -320,7 +319,7 @@
 /* Begin PBXTargetDependency section */
 		DD88AC4F2268530900241D5B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DD88AC382268530700241D5B /* CollectinView */;
+			target = DD88AC382268530700241D5B /* CollectionView */;
 			targetProxy = DD88AC4E2268530900241D5B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -517,7 +516,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CollectinView.app/CollectinView";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CollectionView.app/CollectionView";
 			};
 			name = Debug;
 		};
@@ -539,14 +538,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CollectinView.app/CollectinView";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CollectionView.app/CollectionView";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DD88AC342268530700241D5B /* Build configuration list for PBXProject "CollectinView" */ = {
+		DD88AC342268530700241D5B /* Build configuration list for PBXProject "CollectionView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DD88AC542268530900241D5B /* Debug */,
@@ -555,7 +554,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DD88AC562268530900241D5B /* Build configuration list for PBXNativeTarget "CollectinView" */ = {
+		DD88AC562268530900241D5B /* Build configuration list for PBXNativeTarget "CollectionView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DD88AC572268530900241D5B /* Debug */,
@@ -564,7 +563,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DD88AC592268530900241D5B /* Build configuration list for PBXNativeTarget "CollectinViewTests" */ = {
+		DD88AC592268530900241D5B /* Build configuration list for PBXNativeTarget "CollectionViewTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DD88AC5A2268530900241D5B /* Debug */,
