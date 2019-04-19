@@ -18,11 +18,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    func createImageArray(total: Int, image: String) -> [UIImage]{
-        let imageArray: [UIImage] = []
-        for index in 0...total{
-            imageArray.append(UIImage(named: "\(image)_\(index)"))
+    func createImageArray(total: Int, imagePrefix: String) -> [UIImage]{
+        var imageArray: [UIImage] = []
+        for index in 0..<total{
+            imageArray.append(UIImage(named: "\(imagePrefix)_\(index).png")!)
         }
+        return imageArray
     }
 
 
