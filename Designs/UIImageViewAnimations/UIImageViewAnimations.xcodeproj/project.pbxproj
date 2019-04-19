@@ -57,14 +57,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DDF27A5F2269D2CB00057AF9 /* UIViewAnimations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIViewAnimations.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDF27A5F2269D2CB00057AF9 /* UIImageViewAnimations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIImageViewAnimations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDF27A622269D2CB00057AF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDF27A642269D2CB00057AF9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DDF27A672269D2CB00057AF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DDF27A692269D2CC00057AF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDF27A6C2269D2CC00057AF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDF27A6E2269D2CC00057AF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DDF27A732269D2CC00057AF9 /* UIViewAnimationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIViewAnimationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDF27A732269D2CC00057AF9 /* UIImageViewAnimationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIImageViewAnimationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDF27A772269D2CC00057AF9 /* UIViewAnimationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewAnimationsTests.swift; sourceTree = "<group>"; };
 		DDF27A792269D2CD00057AF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDF27A852269D43B00057AF9 /* heart-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart-3.png"; sourceTree = "<group>"; };
@@ -131,8 +131,8 @@
 		DDF27A602269D2CB00057AF9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DDF27A5F2269D2CB00057AF9 /* UIViewAnimations.app */,
-				DDF27A732269D2CC00057AF9 /* UIViewAnimationsTests.xctest */,
+				DDF27A5F2269D2CB00057AF9 /* UIImageViewAnimations.app */,
+				DDF27A732269D2CC00057AF9 /* UIImageViewAnimationsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -216,9 +216,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DDF27A5E2269D2CB00057AF9 /* UIViewAnimations */ = {
+		DDF27A5E2269D2CB00057AF9 /* UIImageViewAnimations */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DDF27A7C2269D2CD00057AF9 /* Build configuration list for PBXNativeTarget "UIViewAnimations" */;
+			buildConfigurationList = DDF27A7C2269D2CD00057AF9 /* Build configuration list for PBXNativeTarget "UIImageViewAnimations" */;
 			buildPhases = (
 				DDF27A5B2269D2CB00057AF9 /* Sources */,
 				DDF27A5C2269D2CB00057AF9 /* Frameworks */,
@@ -228,14 +228,14 @@
 			);
 			dependencies = (
 			);
-			name = UIViewAnimations;
+			name = UIImageViewAnimations;
 			productName = UIViewAnimations;
-			productReference = DDF27A5F2269D2CB00057AF9 /* UIViewAnimations.app */;
+			productReference = DDF27A5F2269D2CB00057AF9 /* UIImageViewAnimations.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DDF27A722269D2CC00057AF9 /* UIViewAnimationsTests */ = {
+		DDF27A722269D2CC00057AF9 /* UIImageViewAnimationsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DDF27A7F2269D2CD00057AF9 /* Build configuration list for PBXNativeTarget "UIViewAnimationsTests" */;
+			buildConfigurationList = DDF27A7F2269D2CD00057AF9 /* Build configuration list for PBXNativeTarget "UIImageViewAnimationsTests" */;
 			buildPhases = (
 				DDF27A6F2269D2CC00057AF9 /* Sources */,
 				DDF27A702269D2CC00057AF9 /* Frameworks */,
@@ -246,9 +246,9 @@
 			dependencies = (
 				DDF27A752269D2CC00057AF9 /* PBXTargetDependency */,
 			);
-			name = UIViewAnimationsTests;
+			name = UIImageViewAnimationsTests;
 			productName = UIViewAnimationsTests;
-			productReference = DDF27A732269D2CC00057AF9 /* UIViewAnimationsTests.xctest */;
+			productReference = DDF27A732269D2CC00057AF9 /* UIImageViewAnimationsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -270,7 +270,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DDF27A5A2269D2CB00057AF9 /* Build configuration list for PBXProject "UIViewAnimations" */;
+			buildConfigurationList = DDF27A5A2269D2CB00057AF9 /* Build configuration list for PBXProject "UIImageViewAnimations" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -283,8 +283,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DDF27A5E2269D2CB00057AF9 /* UIViewAnimations */,
-				DDF27A722269D2CC00057AF9 /* UIViewAnimationsTests */,
+				DDF27A5E2269D2CB00057AF9 /* UIImageViewAnimations */,
+				DDF27A722269D2CC00057AF9 /* UIImageViewAnimationsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -363,7 +363,7 @@
 /* Begin PBXTargetDependency section */
 		DDF27A752269D2CC00057AF9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DDF27A5E2269D2CB00057AF9 /* UIViewAnimations */;
+			target = DDF27A5E2269D2CB00057AF9 /* UIImageViewAnimations */;
 			targetProxy = DDF27A742269D2CC00057AF9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -557,7 +557,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UIViewAnimations.app/UIViewAnimations";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UIImageViewAnimations.app/UIImageViewAnimations";
 			};
 			name = Debug;
 		};
@@ -578,14 +578,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UIViewAnimations.app/UIViewAnimations";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UIImageViewAnimations.app/UIImageViewAnimations";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DDF27A5A2269D2CB00057AF9 /* Build configuration list for PBXProject "UIViewAnimations" */ = {
+		DDF27A5A2269D2CB00057AF9 /* Build configuration list for PBXProject "UIImageViewAnimations" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DDF27A7A2269D2CD00057AF9 /* Debug */,
@@ -594,7 +594,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DDF27A7C2269D2CD00057AF9 /* Build configuration list for PBXNativeTarget "UIViewAnimations" */ = {
+		DDF27A7C2269D2CD00057AF9 /* Build configuration list for PBXNativeTarget "UIImageViewAnimations" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DDF27A7D2269D2CD00057AF9 /* Debug */,
@@ -603,7 +603,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DDF27A7F2269D2CD00057AF9 /* Build configuration list for PBXNativeTarget "UIViewAnimationsTests" */ = {
+		DDF27A7F2269D2CD00057AF9 /* Build configuration list for PBXNativeTarget "UIImageViewAnimationsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DDF27A802269D2CD00057AF9 /* Debug */,
