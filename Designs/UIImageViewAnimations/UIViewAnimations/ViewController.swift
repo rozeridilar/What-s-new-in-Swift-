@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var heartImageView: UIImageView!
-    @IBOutlet weak var RyuImageView: UIImageView!
+    @IBOutlet weak var ryuImageView: UIImageView!
     
     var heartImages:[UIImage] = []
     var ryuImages:[UIImage] = []
@@ -24,6 +24,14 @@ class ViewController: UIViewController {
         ryuImages = createImageArray(total: 7, imagePrefix: "ryu")
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        heartImageView.animateImages(imageView: heartImageView, images: heartImages)
+        ryuImageView.animateImages(imageView: ryuImageView, images: ryuImages)
+
+    }
+    
+    
     func createImageArray(total: Int, imagePrefix: String) -> [UIImage]{
         var imageArray: [UIImage] = []
         for index in 0..<total{
@@ -34,4 +42,14 @@ class ViewController: UIViewController {
 
 
 }
-
+extension UIImageView{
+    func animateImages(imageView: UIImageView, images:[UIImage]){
+        imageView.animationImages = images
+        imageView.animationDuration = 1.0
+        
+        //put 0 if you want loop
+        imageView.animationRepeatCount = 0
+        
+        imageView.startAnimating()
+    }
+}
