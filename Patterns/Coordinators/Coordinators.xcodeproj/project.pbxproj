@@ -13,6 +13,9 @@
 		DD416500228997C500E87670 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD4164FF228997C500E87670 /* Assets.xcassets */; };
 		DD416503228997C500E87670 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD416501228997C500E87670 /* LaunchScreen.storyboard */; };
 		DD41650E228997C500E87670 /* CoordinatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41650D228997C500E87670 /* CoordinatorsTests.swift */; };
+		DD4165192289984900E87670 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4165182289984900E87670 /* Coordinator.swift */; };
+		DD41651B228998DC00E87670 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41651A228998DC00E87670 /* Storyboarded.swift */; };
+		DD41651D22899C0B00E87670 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD41651C22899C0B00E87670 /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		DD416509228997C500E87670 /* CoordinatorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoordinatorsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD41650D228997C500E87670 /* CoordinatorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorsTests.swift; sourceTree = "<group>"; };
 		DD41650F228997C500E87670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD4165182289984900E87670 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		DD41651A228998DC00E87670 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		DD41651C22899C0B00E87670 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +83,15 @@
 		DD4164F7228997C400E87670 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				DD4165182289984900E87670 /* Coordinator.swift */,
 				DD4164F8228997C400E87670 /* AppDelegate.swift */,
 				DD4164FA228997C400E87670 /* ViewController.swift */,
 				DD4164FC228997C400E87670 /* Main.storyboard */,
 				DD4164FF228997C500E87670 /* Assets.xcassets */,
 				DD416501228997C500E87670 /* LaunchScreen.storyboard */,
 				DD416504228997C500E87670 /* Info.plist */,
+				DD41651A228998DC00E87670 /* Storyboarded.swift */,
+				DD41651C22899C0B00E87670 /* MainCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -199,6 +208,9 @@
 			files = (
 				DD4164FB228997C400E87670 /* ViewController.swift in Sources */,
 				DD4164F9228997C400E87670 /* AppDelegate.swift in Sources */,
+				DD4165192289984900E87670 /* Coordinator.swift in Sources */,
+				DD41651D22899C0B00E87670 /* MainCoordinator.swift in Sources */,
+				DD41651B228998DC00E87670 /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
